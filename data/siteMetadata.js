@@ -7,7 +7,7 @@ const siteMetadata = {
   language: 'en-us',
   theme: 'system',
   siteUrl: 'https://paulhyunchong.com',
-  siteRepo: 'https://github.com/phc5/my-blog',
+  siteRepo: 'https://github.com/phc5/blog',
   siteLogo: '/assets/authors/paul.jpg',
   image: '/assets/authors/paul.jpg',
   socialBanner: '/assets/authors/paul.jpg',
