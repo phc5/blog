@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 import siteMetadata from '@/data/siteMetadata';
 
 const editUrl = (fileName) =>
-  `${siteMetadata.siteRepo}/blob/master/data/posts/${fileName}`;
+  `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`;
 
 const postDateTemplate = {
   weekday: 'long',
