@@ -5,6 +5,7 @@ import { BlogSEO } from '@/components/SEO';
 import Image from '@/components/Image';
 import Tag from '@/components/Tag';
 import HitCounter from '@/components/HitCounter';
+import Footer from '@/components/Footer';
 import siteMetadata from '@/data/siteMetadata';
 
 const editUrl = (fileName) =>
@@ -110,7 +111,7 @@ export default function PostLayout({
                 <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
               </div>
             </div>
-            <footer>
+            <div>
               <div className="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
                 <HitCounter slug={slug} />
                 {tags && (
@@ -126,7 +127,7 @@ export default function PostLayout({
                   </div>
                 )}
                 {(next || prev) && (
-                  <div className="flex justify-between py-4 xl:block xl:space-y-8 xl:py-8">
+                  <div className="block space-y-8 md:flex md:justify-between md:space-y-0 py-4 xl:block xl:space-y-8 xl:py-8">
                     {prev && (
                       <div>
                         <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
@@ -158,10 +159,11 @@ export default function PostLayout({
                   &larr; Back to the blog
                 </Link>
               </div>
-            </footer>
+            </div>
           </div>
         </div>
       </article>
+      <Footer />
     </SectionContainer>
   );
 }

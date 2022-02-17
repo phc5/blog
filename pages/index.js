@@ -27,7 +27,7 @@ export default function Home() {
         title={siteMetadata.title}
         description={siteMetadata.description}
       />
-      <div>
+      <div className="mb-24 md:mb-0">
         <div className="text-center !mb-12 md:!mb-24">
           <h1 className="text-5xl !mb-2 font-semibold tracking-tight text-gray-900 dark:text-gray-100 md:text-7xl">
             Paul Chong
