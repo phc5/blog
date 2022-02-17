@@ -5,13 +5,9 @@ module.exports = {
   experimental: {
     optimizeUniversalDefaults: true,
   },
+  safelist: ['h-6', 'w-6'],
   plugins: [require('@tailwindcss/typography')],
-  content: [
-    './pages/**/*.js',
-    './components/**/*.js',
-    './layouts/**/*.js',
-    './lib/**/*.js',
-  ],
+  content: ['./pages/**/*.js', './components/**/*.js', './lib/**/*.js'],
   darkMode: 'class',
   theme: {
     extend: {
@@ -24,9 +20,8 @@ module.exports = {
         13: '3.25rem',
         14: '3.5rem',
       },
-
       colors: {
-        primary: colors.indigo,
+        primary: colors.cyan,
         gray: colors.neutral,
       },
       transitionDelay: {

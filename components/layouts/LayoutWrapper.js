@@ -11,7 +11,7 @@ const LayoutWrapper = ({ children }) => {
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">
         <header className="flex items-center justify-between py-10">
-          <div>
+          <div className="sm:hidden">
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
                 {typeof siteMetadata.headerTitle === 'string' ? (
@@ -24,17 +24,20 @@ const LayoutWrapper = ({ children }) => {
               </div>
             </Link>
           </div>
+          <div className="hidden sm:block">
+            {/* < */}
+            {headerNavLinks.map((link) => (
+              <Link
+                key={link.title}
+                href={link.href}
+                className="p-1 font-sans text-sm font-semibold text-gray-900 dark:text-gray-100 sm:p-4"
+              >
+                {link.title}
+              </Link>
+            ))}
+          </div>
           <div className="flex items-center text-base leading-5">
-            <div className="hidden sm:flex">
-              {headerNavLinks.map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="p-1 font-sans text-sm font-semibold text-gray-900 dark:text-gray-100 sm:p-4"
-                >
-                  {link.title}
-                </Link>
-              ))}
+            <div className="hidden sm:flex items-center">
               <SocialIcon
                 kind="github"
                 href={siteMetadata.github}
@@ -47,7 +50,9 @@ const LayoutWrapper = ({ children }) => {
                 size="6"
                 styles="p-1 sm:p-4"
               />
+              |
             </div>
+
             <ThemeSwitch />
             <MobileNav />
           </div>
