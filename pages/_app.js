@@ -6,7 +6,8 @@ import NProgress from 'nprogress';
 import LayoutWrapper from '@/components/layouts/LayoutWrapper';
 import { usePanelBear } from '../hooks/usePanelbear';
 import siteMetadata from '@/data/siteMetadata';
-import '../styles/index.css';
+import '@/styles/index.css';
+import '@/styles/prism.css';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
